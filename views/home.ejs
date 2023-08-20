@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+<body>
+
+    <%- include('common/header'); %>
+
+    <h1>home page using ejs</h1>
+    <p><b>Name:</b> <%= user.name %></p>
+    <p><b>Email:</b> <%= user.email %></p>
+    <p><b>City:</b> <%= user.city %></p>
+    <p><b>Skills:</b></p>
+    <ul>
+        <% user.skills.forEach((item)=> {
+               %> <li><%= item %></li> <%
+            }) 
+        %>
+    </ul>
+
+    <%- include('common/footer'); %>
+
+</body>
+</html>
